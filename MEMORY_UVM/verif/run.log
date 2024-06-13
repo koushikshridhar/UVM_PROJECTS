@@ -1,0 +1,123 @@
+# vsim -assertdebug -novopt -suppress 12110 top -sv_lib C:/questasim64_10.7c/uvm-1.2/win64/uvm_dpi "+UVM_TESTNAME=mem_reg_wr_rd_test" -l run.log "+UVM_TIMEOUT=500000" "+UVM_VERBOSITY=UVM_MEDIUM" 
+# Start time: 11:13:30 on Apr 04,2024
+# Loading C:/Users/Koushik/AppData/Local/Temp\Koushik@LAPTOP-46UFUK2S_dpi_21144\win64_gcc-10.3.0\export_tramp.dll
+# ** Warning: (vsim-8891) All optimizations are disabled because the -novopt option is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features, please see the User's Manual section on Preserving Object Visibility with vopt. -novopt option is now deprecated and will be removed in future releases.
+# Refreshing D:/personal/UVM/MEMORY_UVM/verif/work.top
+# ** Warning: (vlog-8891) All optimizations are disabled because the -novopt option is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features, please see the User's Manual section on Preserving Object Visibility with vopt. -novopt option is now deprecated and will be removed in future releases.
+# Refreshing D:/personal/UVM/MEMORY_UVM/verif/work.list_svh_unit
+# ** Warning: (vlog-8891) All optimizations are disabled because the -novopt option is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features, please see the User's Manual section on Preserving Object Visibility with vopt. -novopt option is now deprecated and will be removed in future releases.
+# Refreshing D:/personal/UVM/MEMORY_UVM/verif/work.uvm_pkg
+# ** Warning: (vlog-8891) All optimizations are disabled because the -novopt option is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features, please see the User's Manual section on Preserving Object Visibility with vopt. -novopt option is now deprecated and will be removed in future releases.
+# Loading sv_std.std
+# Loading work.uvm_pkg
+# Loading work.list_svh_unit
+# ** Note: (vsim-8785) UVM-aware debugging capabilities will be disabled since no compiled "questa_uvm_pkg" can be found.
+# This also means that later if you turn on UVM-aware debugging your debug simulations may have
+# different random seeds from your non-debug simulations.
+# Loading work.top
+# Refreshing D:/personal/UVM/MEMORY_UVM/verif/work.mem_intf
+# ** Warning: (vlog-8891) All optimizations are disabled because the -novopt option is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features, please see the User's Manual section on Preserving Object Visibility with vopt. -novopt option is now deprecated and will be removed in future releases.
+# Loading work.mem_intf
+# Refreshing D:/personal/UVM/MEMORY_UVM/verif/work.memory
+# ** Warning: (vlog-8891) All optimizations are disabled because the -novopt option is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features, please see the User's Manual section on Preserving Object Visibility with vopt. -novopt option is now deprecated and will be removed in future releases.
+# Loading work.memory
+# Compiling C:/Users/Koushik/AppData/Local/Temp\Koushik@LAPTOP-46UFUK2S_dpi_21144\win64_gcc-10.3.0\exportwrapper.c
+# Loading C:/Users/Koushik/AppData/Local/Temp\Koushik@LAPTOP-46UFUK2S_dpi_21144\win64_gcc-10.3.0\vsim_auto_compile.dll
+# Loading C:/questasim64_10.7c/uvm-1.2/win64/uvm_dpi.dll
+# UVM_INFO D:/personal/UVM/0.UVM_SRC/uvm-1.2/src/base/uvm_root.svh(392) @ 0: reporter [UVM/RELNOTES] 
+# ----------------------------------------------------------------
+# UVM-1.2
+# (C) 2007-2014 Mentor Graphics Corporation
+# (C) 2007-2014 Cadence Design Systems, Inc.
+# (C) 2006-2014 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# (C) 2013-2014 NVIDIA Corporation
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO @ 0: reporter [RNTST] Running test mem_reg_wr_rd_test...
+# UVM_INFO @ 0: reporter [TIMOUTSET] '+UVM_TIMEOUT=500000' provided on the command line is being applied.
+# UVM_INFO test_lib.sv(9) @ 0: uvm_test_top [MEM_UVC] Test: Build_phase
+# UVM_INFO D:/personal/UVM/0.UVM_SRC/uvm-1.2/src/base/uvm_spell_chkr.svh(123) @ 0: reporter [UVM/CONFIGDB/SPELLCHK] include_coverage not located, did you mean mem_vif
+# UVM_INFO test_lib.sv(31) @ 0: uvm_test_top [TB HIERARCHY] --------------------------------------------------------------
+# Name                       Type                    Size  Value
+# --------------------------------------------------------------
+# uvm_test_top               mem_reg_wr_rd_test      -     @336 
+#   env                      mem_env                 -     @372 
+#     agent                  mem_agent               -     @381 
+#       drv                  mem_drv                 -     @391 
+#         rsp_port           uvm_analysis_port       -     @410 
+#         seq_item_port      uvm_seq_item_pull_port  -     @400 
+#       sqr                  uvm_sequencer           -     @420 
+#         rsp_export         uvm_analysis_export     -     @429 
+#         seq_item_export    uvm_seq_item_pull_imp   -     @547 
+#         arbitration_queue  array                   0     -    
+#         lock_queue         array                   0     -    
+#         num_last_reqs      integral                32    'd1  
+#         num_last_rsps      integral                32    'd1  
+# --------------------------------------------------------------
+# 
+# UVM_INFO seq_lib.sv(64) @ 0: uvm_test_top.env.agent.sqr@@reg_wr_rd_seq [reg_wr_rd_seq] GOT mem_block_h from uvm_config_db
+# 		mem_regs[0] = '{m_leaf_name:"regA_reg", m_inst_id:362, use_uvm_seeding:1, m_inst_count:588, __m_uvm_status_container:@uvm_status_container@1, uvm_global_copy_map:'{ }, m_locked:1, m_parent:@mem_block@1, m_regfile_parent:null, m_n_bits:32, m_n_used_bits:32, m_maps:'{@uvm_reg_map@1:1 }, m_fields:'{@uvm_reg_field@1}, m_has_cover:0, m_cover_on:0, m_atomic:@semaphore@2, m_process:null, m_fname:"", m_lineno:0, m_read_in_progress:0, m_write_in_progress:0, m_update_in_progress:0, m_is_busy:0, m_is_locked_by_field:0, m_backdoor:null, m_hdl_paths_pool:@uvm_object_string_pool__3@1, m_max_size:32, m_register_cb_uvm_reg_cbs:1, F:@uvm_reg_field@1, type_name:"regA"}
+# addr = 00000005  mem_regs[0] = '{m_leaf_name:"regA_reg", m_inst_id:362, use_uvm_seeding:1, m_inst_count:588, __m_uvm_status_container:@uvm_status_container@1, uvm_global_copy_map:'{ }, m_locked:1, m_parent:@mem_block@1, m_regfile_parent:null, m_n_bits:32, m_n_used_bits:32, m_maps:'{@uvm_reg_map@1:1 }, m_fields:'{@uvm_reg_field@1}, m_has_cover:0, m_cover_on:0, m_atomic:@semaphore@2, m_process:null, m_fname:"", m_lineno:0, m_read_in_progress:0, m_write_in_progress:0, m_update_in_progress:0, m_is_busy:0, m_is_locked_by_field:0, m_backdoor:null, m_hdl_paths_pool:@uvm_object_string_pool__3@1, m_max_size:32, m_register_cb_uvm_reg_cbs:1, F:@uvm_reg_field@1, type_name:"regA"}
+# 
+# get_reg_by_name reg_name = '{m_leaf_name:"regA_reg", m_inst_id:362, use_uvm_seeding:1, m_inst_count:588, __m_uvm_status_container:@uvm_status_container@1, uvm_global_copy_map:'{ }, m_locked:1, m_parent:@mem_block@1, m_regfile_parent:null, m_n_bits:32, m_n_used_bits:32, m_maps:'{@uvm_reg_map@1:1 }, m_fields:'{@uvm_reg_field@1}, m_has_cover:0, m_cover_on:0, m_atomic:@semaphore@2, m_process:null, m_fname:"", m_lineno:0, m_read_in_progress:0, m_write_in_progress:0, m_update_in_progress:0, m_is_busy:0, m_is_locked_by_field:0, m_backdoor:null, m_hdl_paths_pool:@uvm_object_string_pool__3@1, m_max_size:32, m_register_cb_uvm_reg_cbs:1, F:@uvm_reg_field@1, type_name:"regA"}
+# UVM_INFO mem_intf.sv(42) @ 5: reporter [valid_ready_check_S] FAILED
+# ---------------------------------------------------------------------------------------
+# Name                           Type      Size  Value                                   
+# ---------------------------------------------------------------------------------------
+# mem_tx_h                       mem_tx    -     @592                                    
+#   addr                         integral  4     'h5                                     
+#   data                         integral  32    'h68f0066a                              
+#   wr_rd                        integral  1     'h1                                     
+#   begin_time                   time      64    15                                      
+#   depth                        int       32    'd2                                     
+#   parent sequence (name)       string    13    reg_wr_rd_seq                           
+#   parent sequence (full name)  string    40    uvm_test_top.env.agent.sqr.reg_wr_rd_seq
+#   sequencer                    string    26    uvm_test_top.env.agent.sqr              
+# ---------------------------------------------------------------------------------------
+# UVM_INFO mem_intf.sv(42) @ 15: reporter [valid_ready_check_S] FAILED
+# DESIGN WRITE		addr=5,wdata=68f0066a
+# 
+# completed one write to mem_block_h.regA_reg reg its status -> UVM_IS_OK
+# 
+# UVM_INFO seq_lib.sv(90) @ 25: uvm_test_top.env.agent.sqr@@reg_wr_rd_seq [uvm_test_top.env.agent.sqr.reg_wr_rd_seq] completed one write to mem_block_h.regA_reg reg its status -> UVM_IS_OK
+# UVM_INFO D:/personal/UVM/0.UVM_SRC/uvm-1.2/src/base/uvm_objection.svh(1270) @ 125: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO D:/personal/UVM/0.UVM_SRC/uvm-1.2/src/base/uvm_report_server.svh(847) @ 125: reporter [UVM/REPORT/SERVER] 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :   11
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [MEM_UVC]     1
+# [RNTST]     1
+# [TB HIERARCHY]     1
+# [TEST_DONE]     1
+# [TIMOUTSET]     1
+# [UVM/CONFIGDB/SPELLCHK]     1
+# [UVM/RELNOTES]     1
+# [reg_wr_rd_seq]     1
+# [uvm_test_top.env.agent.sqr.reg_wr_rd_seq]     1
+# [valid_ready_check_S]     2
+# 
+# ** Note: $finish    : D:/personal/UVM/0.UVM_SRC/uvm-1.2/src/base/uvm_root.svh(517)
+#    Time: 125 ns  Iteration: 67  Instance: /top
+# 1
+# Break in Task uvm_pkg/uvm_root::run_test at D:/personal/UVM/0.UVM_SRC/uvm-1.2/src/base/uvm_root.svh line 517
+exit
+# End time: 16:10:36 on Apr 05,2024, Elapsed time: 28:57:06
+# Errors: 0, Warnings: 1
