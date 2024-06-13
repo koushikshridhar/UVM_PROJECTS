@@ -3,6 +3,7 @@ mem_env env;
 `uvm_component_utils(mem_base_test)
 `NEW_COMP
 mem_block mem_block_h;
+mem_adapter mem_adapter_h;
 
 function void build_phase(uvm_phase phase);
 	`uvm_info("MEM_UVC", "Test: Build_phase", UVM_NONE)
@@ -22,7 +23,6 @@ endfunction
 
 function void connect_phase(uvm_phase phase);
 	super.connect_phase(phase);
-	mem_adapter mem_adapter_h;
 	mem_adapter_h= mem_adapter::type_id::create("mem_adapter_h", this);
 	mem_block_h.mem_map.set_sequencer(env.agent.sqr, mem_adapter_h);
 endfunction
